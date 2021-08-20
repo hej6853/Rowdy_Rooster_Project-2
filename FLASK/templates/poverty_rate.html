@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Extreme Poverty Rate</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/img/favicon.png" rel="icon">
+  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Montserrat :300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../static/css/us_foreign_aid.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/css/style.css" rel="stylesheet">
+  <script src='https://cdn.plot.ly/plotly-2.3.1.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="../../index.html">Rowdy Roosters</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="../static/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../../index.html">Home</a></li>
+          <li class="dropdown"><a href="#"><span>Pages</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="popupquiz.html">Factfulness Quiz</a></li>
+              <li><a href="primary_school.html">Primary School Completion</a></li>
+              <li><a href="poverty_rate.html">Poverty Rates</a></li>
+              <li><a href="birth_rate.html">Birth Rates</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2>World Poverty Rate Across Time</h2>
+              <ol>
+                <li><a href="../../index.html">Home</a></li>
+                <li>World Poverty Rate Across Time</li>
+              </ol>
+            </div>
+            <h5 class="container"><br>Q3. In the last 20 years, the proportion of the world population living in extreme poverty has...</h5>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-10">
+            <h4><b>Graph 1. Worldwide 'Extreme Poverty' Rate (0-14 years) Over Time</b></h4></br></br>
+            <select id="selectButton"></select>            
+            <div id="my_dataviz"></div>
+          </div>
+          <div class="col-lg-2">
+
+            <div class="portfolio-description">
+              <h5><br><br><br><br><br><br><b>Defitinion of</br>'Extreme Poverty'</b></h5>
+              <p>
+                This visualization shows a decreasing trend in the percentage of people making under $2.00 a day, adjusted for inflation. Individual countries may also be selected based on their country code for observation.
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio-description">
+            <p>
+              <h4><br><br><b>Many low income countries became middle income countries</b></h4>
+              Thirty years ago 45 countries had average incomes so low they were called “low income countries” by the World Bank. 
+              Since then 24 of them have reached middle income level. Back in 1998 their combined population was 2.6 billion people,
+              and today its 3.9 billion people, which are now counted as citizens of “Middle Income countries”, because their average incomes are much higher now.
+              <br><br>Of course, not everyone got richer. But looking at the number of people on different incomes a vast majority moved up to much higher living standards.
+              Among those 24 countries the number of people in extreme poverty, below 1.9$/ day was roughly 1.8 billion, 30 years ago. 
+
+              (Reference:<a href="https://datatopics.worldbank.org/world-development-indicators/stories/the-classification-of-countries-by-income.html">The World Bank</a>, 
+              <a href="https://www.gapminder.org/video/global-development/">gapminder.org</a>)</br></br></br></br></br>
+              </p>
+          </div>
+
+          <!--Bar Chart Race-->
+          <div class="col-lg-10">
+            <h4><b>Graph 2. US Foreign Aid Disbursements Over Time</b></h4></br></br></br></br>
+            <div id="bar_race"></div>
+            <div id="play-controls">
+              <button id='play-pause-button' class="fa fa-play" title="play"></button>
+              <input id="play-range" type="range" value="1960" min="2000" max="2021" />
+            </div>
+        </div>
+        <div class="portfolio-description">
+          <p>
+            <h5><br><br><b>Points to watch for:</b></h5>
+            <ul>
+              <li> How does the USAID Spend Its Foreign Aid?</li>
+              <li> Does the economic development aid go to the appropriate countries? and what are the criteria for its aid? </li>
+              <li> Who is getting the most and how much? </li>
+            </ul>
+            (Learn more here: <a href="https://foreignassistance.gov/cd">USAID: Foreign Aid Explorier</a>,
+            <a href="https://www.un.org/millenniumgoals/education.shtml">UN Millennium Development Goals)</a>)</br></br>                            
+          </p>            
+      </div>        
+        </div>
+
+        <!-- <div class="portfolio-description">
+          <h4><br><br><b>Why only 5% of people had right knowledge? Why do we distort our thinking?</b></br></br></br></h4>              
+          <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;<img src="../static/img/Q3_poverty_rate.png" alt="" style="width:1000px;height:180px;">
+          </p>
+          
+          <p>
+            <h5><br><br><br><br><b>IDENTIFY YOUR DRAMATIC INSTINCTS!</b></br></br></br></br></br></h5>
+            
+            <div style="line-height:50px">
+              <img src="../static/img/Q3_instinct.jpg" alt="" style="width:900px;height:350px;">
+            </div>
+          </p>
+          <p><h5><br><br><br><br>And, here is the solution : <b>CONTROL YOUR DRAMATIC INSTINCTS!</b></br></br></br></br></br></h5>            
+            <div style="line-height:50px">
+              <img src="../static/img/Q3_rot_instinct.jpg" alt="" style="width:900px;height:350px;">                           
+            </div>
+              <br><br><a href="https://www.gapminder.org/factfulness/">Learn more your 'Dramatic Instincts'</a>
+          </p>               
+      </div>   -->
+          
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Rowdy Roosters</h3>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../index.html">Home</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Pages</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="popupquiz.html">Factfulness Quiz</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="primary_school.html">Primary School Completion</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="poverty_rate.html">Poverty Rates</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="birth_rate.html">Birth Rates</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/aos/aos.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/vendor/php-email-form/validate.js"></script>
+  <script src="../static/vendor/purecounter/purecounter.js"></script>
+  <script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/js/main.js"></script>
+  <script src="../static/js/poverty_rate.js"></script>
+  <script src="../static/js/us_foreign_aid.js"></script>
+</body>
+
+</html>
