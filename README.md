@@ -43,27 +43,33 @@ Interestingly, most people in the richest countries or even the scientists, ppl 
 ![image](https://user-images.githubusercontent.com/79428102/130549009-ea37a380-8bc4-40ff-9d02-1d143bba1b94.png)
 
 
-### 2) Low-Income Countries Primary School Completion Rate  
+### 2) Low-Income Countries Primary School Completion Rate
+(https://hej6853.github.io/Rowdy_Rooster_Project-2/FLASK/templates/primary_school.html)
 ![image](https://user-images.githubusercontent.com/79428102/130549138-cc7d8d60-d88a-4f22-9d2a-b3044e66876d.png)
 
 
-### 3) Worldwide Primay School Completion Rate  
+### 3) Worldwide Primay School Completion Rate
+(https://hej6853.github.io/Rowdy_Rooster_Project-2/FLASK/templates/primary_school.html)
 ![image](https://user-images.githubusercontent.com/79428102/130549214-b16627b3-b09b-4191-8657-6e57360caefd.png)
 
 
 ### 4) Worldwide 'Extreme Poverty' Rate (0-14 years) Over Time
+(https://hej6853.github.io/Rowdy_Rooster_Project-2/FLASK/templates/poverty_rate.html)
 ![image](https://user-images.githubusercontent.com/79428102/130549299-41fa746b-5993-43ae-8233-6b077f76a484.png)
 
 
 ### 5) World Children Population Forecast (by 2100)
+(https://hej6853.github.io/Rowdy_Rooster_Project-2/FLASK/templates/birth_rate.html)
 ![image](https://user-images.githubusercontent.com/79428102/130549398-8fef937e-1b92-4f1d-96f7-b400a5de7199.png)
 
 
 ### 6) Worldwide Children Population Rate (0-14 years) Over Time
+(https://hej6853.github.io/Rowdy_Rooster_Project-2/FLASK/templates/birth_rate.html)
 ![image](https://user-images.githubusercontent.com/79428102/130549436-51f76f60-784a-4a53-8ee6-a507e50fc358.png)
 
 
 ### 7) US Foreign Aid Disbursements Over Time (Bar Chart Race)
+(https://hej6853.github.io/Rowdy_Rooster_Project-2/FLASK/templates/birth_rate.html)
 ![image](https://user-images.githubusercontent.com/79428102/130549556-e8763b73-54e7-44b4-938e-544e7aacc396.png)
 
 
